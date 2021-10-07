@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "fastify start -l info ./src/app.js",
+    "dev": "fastify start -w -l info -P -o ./src/app.js"
+  },
+  "dependencies": {
+    "fastify": "3.22.0",
+    "fastify-autoload": "3.9.0",
+    "fastify-cli": "2.13.0",
+    "fastify-env": "2.1.1",
+    "fastify-plugin": "3.0.0",
+    "fastify-sensible": "3.1.1",
+    "fastify-swagger": "4.12.4",
+    "fluent-json-schema": "3.0.1"
+  },
+  "devDependencies": {}
+}

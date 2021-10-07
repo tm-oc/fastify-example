@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: ./docker/api
+      dockerfile: Dockerfile
+    command: yarn dev
+    volumes:
+      - ./api:/app
+    ports:
+      - 3010:3000
+    tty:
+      true
