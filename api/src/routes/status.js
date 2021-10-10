@@ -2,7 +2,13 @@
 
 const S = require('fluent-json-schema')
 
-module.exports = async function healthcheck(fastify, opts) {
+module.exports = async function (fastify, opts) {
+  const main = async function (req, reply) {
+    return {
+      status: 'ok'
+    }
+  }
+
   fastify.route({
     method: 'GET',
     url: '/',
@@ -10,15 +16,9 @@ module.exports = async function healthcheck(fastify, opts) {
       tags: ['Status'],
       description: 'Status',
       response: {
-        200: S.object().prop('status', S.string()),
-      },
+        200: S.object().prop('status', S.string())
+      }
     },
-    handler: main,
+    handler: main
   })
-
-  async function main(req, reply) {
-    return {
-      status: 'ok',
-    }
-  }
 }
