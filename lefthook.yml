@@ -1,0 +1,12 @@
+# EXAMPLE USAGE
+# Refer for explanation to following link:
+# https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md
+colors: false
+
+pre-commit:
+  piped: true
+  commands:
+    1_lint:
+      root: "api/"
+      glob: "*.{js}"
+      run: docker-compose run --rm api yarn standard {staged_files} --no-color
