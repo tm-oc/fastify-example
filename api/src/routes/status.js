@@ -14,7 +14,7 @@ module.exports = async function (fastify, opts) {
     url: '/',
     schema: {
       tags: ['Status'],
-      description: 'Status',
+      description: '',
       response: {
         200: S.object().prop('status', S.string())
       }

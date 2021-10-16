@@ -8,7 +8,14 @@ const S = require('fluent-json-schema')
 
 const app = async function (fastify, opts) {
   fastify.register(Env, {
-    schema: S.object().prop('NODE_ENV', S.string().required()).valueOf()
+    schema: S.object()
+      .prop('NODE_ENV', S.string().required())
+      .prop('DB_HOST', S.string().required())
+      .prop('DB_PORT', S.number().required())
+      .prop('DB_DATABASE', S.string().required())
+      .prop('DB_USER', S.string().required())
+      .prop('DB_PASSWORD', S.string().required())
+      .valueOf()
   })
 
   fastify.register(Sensible)
