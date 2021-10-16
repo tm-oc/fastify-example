@@ -15,6 +15,8 @@ const app = async function (fastify, opts) {
       .prop('DB_DATABASE', S.string().required())
       .prop('DB_USER', S.string().required())
       .prop('DB_PASSWORD', S.string().required())
+      .prop('REDIS_HOST', S.string().required())
+      .prop('REDIS_PORT', S.number().required())
       .valueOf()
   })
 

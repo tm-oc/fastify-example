@@ -11,6 +11,8 @@ module.exports = function () {
   process.env.DB_DATABASE = 'test_db'
   process.env.DB_USER = 'test_user'
   process.env.DB_PASSWORD = 'test_pass'
+  process.env.REDIS_HOST = 'redis'
+  process.env.REDIS_PORT = 6379
 
   const server = Fastify({
     looger: {
