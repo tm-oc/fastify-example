@@ -51,3 +51,6 @@ jspm_packages
 
 # vim swap files
 *.swp
+
+# db
+db/data

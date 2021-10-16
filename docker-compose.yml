@@ -12,3 +12,22 @@ services:
       - 3010:3000
     tty:
       true
+    depends_on:
+      - db
+  db:
+    restart: always
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin
+    volumes:
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
+      - ./db/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: test_user
+      MYSQL_PASSWORD: test_pass
+      TZ: "Asia/Tokyo"
+    ports:
+      - 3306:3306
