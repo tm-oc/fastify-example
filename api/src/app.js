@@ -17,6 +17,10 @@ const app = async function (fastify, opts) {
       .prop('DB_PASSWORD', S.string().required())
       .prop('REDIS_HOST', S.string().required())
       .prop('REDIS_PORT', S.number().required())
+      .prop('AWS_S3_ACCESS_KEY_ID', S.string().required())
+      .prop('AWS_S3_SECRET_ACCESS_KEY', S.string().required())
+      .prop('AWS_S3_REGION', S.string().required())
+      .prop('AWS_S3_ENDPOINT', S.string().required())
       .valueOf()
   })
 

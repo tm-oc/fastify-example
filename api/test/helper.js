@@ -13,6 +13,10 @@ module.exports = function () {
   process.env.DB_PASSWORD = 'test_pass'
   process.env.REDIS_HOST = 'redis'
   process.env.REDIS_PORT = 6379
+  process.env.AWS_S3_ACCESS_KEY_ID = 'minio'
+  process.env.AWS_S3_SECRET_ACCESS_KEY = 'minio123'
+  process.env.AWS_S3_REGION = 'ap-northeast-1'
+  process.env.AWS_S3_ENDPOINT = 'http://minio:9000'
 
   const server = Fastify({
     looger: {

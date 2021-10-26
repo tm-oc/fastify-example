@@ -10,10 +10,12 @@
     "lint": "standard"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "3.38.0",
     "fastify": "3.22.0",
     "fastify-autoload": "3.9.0",
     "fastify-cli": "2.13.0",
     "fastify-env": "2.1.1",
+    "fastify-multipart": "5.0.2",
     "fastify-plugin": "3.0.0",
     "fastify-sensible": "3.1.1",
     "fastify-swagger": "4.12.4",
