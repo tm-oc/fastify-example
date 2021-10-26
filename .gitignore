@@ -57,3 +57,6 @@ db/data
 
 # redis
 redis/data
+
+# minio
+minio/data
