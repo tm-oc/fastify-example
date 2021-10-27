@@ -60,3 +60,8 @@ services:
       /usr/bin/mc mb test-minio/test-bucket;
       /usr/bin/mc policy set public test-minio/test-bucket;
       "
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - "8025:8025"
+      - "1025:1025"
