@@ -21,7 +21,8 @@
     "fastify-swagger": "4.12.4",
     "fluent-json-schema": "3.0.1",
     "ioredis": "4.28.0",
-    "mysql2": "2.3.1"
+    "mysql2": "2.3.1",
+    "nodemailer": "6.7.0"
   },
   "devDependencies": {
     "jest": "27.2.5",

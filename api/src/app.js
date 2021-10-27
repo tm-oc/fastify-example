@@ -21,6 +21,8 @@ const app = async function (fastify, opts) {
       .prop('AWS_S3_SECRET_ACCESS_KEY', S.string().required())
       .prop('AWS_S3_REGION', S.string().required())
       .prop('AWS_S3_ENDPOINT', S.string().required())
+      .prop('MAILER_HOST', S.string().required())
+      .prop('MAILER_PORT', S.string().required())
       .valueOf()
   })
 

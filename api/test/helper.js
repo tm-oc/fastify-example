@@ -17,6 +17,8 @@ module.exports = function () {
   process.env.AWS_S3_SECRET_ACCESS_KEY = 'minio123'
   process.env.AWS_S3_REGION = 'ap-northeast-1'
   process.env.AWS_S3_ENDPOINT = 'http://minio:9000'
+  process.env.MAILER_HOST = 'mailhog'
+  process.env.MAILER_PORT = '1025'
 
   const server = Fastify({
     looger: {
